@@ -32,12 +32,12 @@ export default async function ArticlesGrid() {
         </div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {articles.map((article) => (
             <Link
               key={article.id}
               href={`/blog/${article.id}`}
-              className="group bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition border"
+              className="group bg-white rounded-t-md overflow-hidden shadow hover:shadow-xl transition border border-border"
             >
               <div className="relative h-44 w-full overflow-hidden">
                 <Image
@@ -48,6 +48,11 @@ export default async function ArticlesGrid() {
                 />
               </div>
               <div className="p-5">
+                <span
+                      className={`text-xs font-semibold ${article.category.color}`}
+                    >
+                      {article.category.name}
+                    </span>
                 <h3 className="font-bold text-lg text-amber-900">
                   {article.title}
                 </h3>

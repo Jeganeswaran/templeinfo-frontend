@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Article, ArticleCategory } from "@/data/types";
+import { NewsletterCTA } from "@/components/shared";
 
 interface BlogSidebarProps {
   categories: ArticleCategory[];
@@ -122,25 +123,11 @@ export default function BlogSidebar({
         </div>
 
         {/* Newsletter */}
-        <div className="bg-gradient-to-br from-orange-500 to-amber-500 rounded-2xl p-6 text-white">
-          <h3 className="font-bold text-lg mb-2">Newsletter</h3>
-          <p className="text-white/90 text-sm mb-4">
-            புதிய கட்டுரைகள் மற்றும் கோவில் தகவல்களை பெற பதிவு செய்யுங்கள்
-          </p>
-          <div className="space-y-3">
-            <input
-              type="email"
-              placeholder="உங்கள் மின்னஞ்சல்"
-              className="w-full px-4 py-3 rounded-xl text-gray-800 placeholder-gray-500 outline-none focus:ring-2 focus:ring-white/50"
-            />
-            <button className="w-full bg-white text-orange-600 px-4 py-3 rounded-xl font-semibold hover:bg-orange-50 transition">
-              Subscribe
-            </button>
-          </div>
-          <p className="text-white/70 text-xs mt-3">
-            We respect your privacy. Unsubscribe anytime.
-          </p>
-        </div>
+        <NewsletterCTA
+          title="Newsletter"
+          description="புதிய கட்டுரைகள் மற்றும் கோவில் தகவல்களை பெற பதிவு செய்யுங்கள்"
+          variant="inline"
+        />
 
         {/* Google Ads Placeholder */}
         <div className="bg-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-4 text-center">

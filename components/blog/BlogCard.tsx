@@ -23,7 +23,7 @@ export default function BlogCard({ article }: BlogCardProps) {
   return (
     <Link
       href={`/blog/${article.id}`}
-      className="bg-white rounded-3xl overflow-hidden shadow hover:shadow-xl transition border border-orange-100 group block"
+      className="bg-white rounded rounded-t-md overflow-hidden shadow hover:shadow-xl transition border border-orange-100 group block"
     >
       <div className="relative h-48 w-full overflow-hidden">
         <Image

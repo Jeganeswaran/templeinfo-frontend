@@ -37,8 +37,6 @@ export default function HomePage() {
       {/* Pancha Bhoota Sthalam Section */}
       <PanchaBhootaSthalam />
 
-      {/* Articles Carousel with Tag Filters */}
-      <Articles />
 
       {/* Articles Grid Section */}
       <ArticlesGrid />

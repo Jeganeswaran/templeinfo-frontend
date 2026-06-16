@@ -21,7 +21,7 @@ const panchaBhootaTemples: ElementTemple[] = [
     elementEmoji: "🌍",
     elementColor: "bg-green-500",
     borderColor: "border-green-100",
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
   },
   {
     id: "jambukeswarar",
@@ -41,7 +41,7 @@ const panchaBhootaTemples: ElementTemple[] = [
     elementEmoji: "🔥",
     elementColor: "bg-red-500",
     borderColor: "border-red-100",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
   },
   {
     id: "kalahasteeswara",
@@ -61,7 +61,7 @@ const panchaBhootaTemples: ElementTemple[] = [
     elementEmoji: "🌌",
     elementColor: "bg-purple-500",
     borderColor: "border-purple-100",
-    image: "https://images.unsplash.com/photo-1581852057105-68d8d43e891f",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
   },
 ];
 
@@ -70,17 +70,7 @@ export default function PanchaBhootaSthalam() {
     <section className="py-20 bg-gradient-to-b from-orange-50 to-white">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
-        <div className="relative mb-14">
-          {/* View More Button - Desktop */}
-          <div className="absolute top-0 right-0 hidden md:block">
-            <Link
-              href="/temple-category/pancha-bhoota"
-              className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/70 backdrop-blur-md border border-amber-200 shadow-md text-orange-700 font-semibold hover:bg-white hover:shadow-lg transition-all duration-300"
-            >
-              View All 5 Temples →
-            </Link>
-          </div>
-
+        <div className="">
           {/* Center Content */}
           <div className="text-center">
             <span className="text-orange-600 uppercase tracking-widest text-sm">
@@ -91,19 +81,27 @@ export default function PanchaBhootaSthalam() {
             </h2>
             <div className="w-32 h-1 bg-gradient-to-r from-orange-600 to-amber-400 mx-auto mt-5 rounded-full"></div>
             <p className="text-gray-600 mt-4 max-w-2xl mx-auto">
-              நிலம், நீர், நெருப்பு, காற்று மற்றும் ஆகாயத்தை பிரதிபலிக்கும் ஐந்து
-              புனித சிவ தலங்கள்
+              நிலம், நீர், நெருப்பு, காற்று மற்றும் ஆகாயத்தை பிரதிபலிக்கும்
+              ஐந்து புனித சிவ தலங்கள்
             </p>
           </div>
         </div>
-
+        {/* View More Button - Desktop */}
+        <div className="flex md:justify-end mb-4 sm:justiy-center">
+          <Link
+            href="/temple-category/pancha-bhoota"
+            className="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/70 backdrop-blur-md border border-amber-200 shadow-md text-orange-700 font-semibold hover:bg-white hover:shadow-lg transition-all duration-300"
+          >
+            View All 5 Temples →
+          </Link>
+        </div>
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
           {panchaBhootaTemples.map((temple) => (
             <Link
               key={temple.id}
               href={`/temple/${temple.id}`}
-              className={`group bg-white rounded-3xl overflow-hidden shadow hover:shadow-2xl transition border ${temple.borderColor}`}
+              className={`group bg-white rounded-md overflow-hidden shadow hover:shadow-2xl transition border ${temple.borderColor}`}
             >
               <div className="relative h-40 w-full overflow-hidden">
                 <Image
@@ -118,8 +116,12 @@ export default function PanchaBhootaSthalam() {
                   {temple.elementEmoji} {temple.element}
                 </div>
               </div>
-              <div className="p-4">
-                <h3 className="font-bold text-amber-900">{temple.name}</h3>
+              <div className="p-4 text-center space-y-2">
+                <h3 className="font-semibold text-amber-900">{temple.name}</h3>
+                <p className="text-sm text-gray-800 mt-1">
+                  நிலம், நீர், நெருப்பு, காற்று மற்றும் ஆகாயத்தை பிரதிபலிக்கும்
+                  ஐந்து புனித சிவ தலங்கள்
+                </p>
                 <p className="text-sm text-gray-500 mt-1">{temple.location}</p>
               </div>
             </Link>

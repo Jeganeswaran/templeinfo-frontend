@@ -30,7 +30,7 @@ export const districts: District[] = [
     templeCount: 200,
     description: "City of thousand temples. Home to Ekambareswarar, Kamakshi Amman, and Varadharaja Perumal temples.",
     descriptionTamil: "ஆயிரம் கோவில்களின் நகரம். ஏகாம்பரநாதர், காமாட்சி அம்மன், வரதராஜ பெருமாள் கோவில்களின் இருப்பிடம்.",
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     featured: true,
   },
   {
@@ -41,7 +41,7 @@ export const districts: District[] = [
     templeCount: 180,
     description: "Temple city famous for Meenakshi Amman Temple. One of the oldest cities in India.",
     descriptionTamil: "மீனாட்சி அம்மன் கோவிலுக்கு புகழ்பெற்ற கோவில் நகரம். இந்தியாவின் பழமையான நகரங்களில் ஒன்று.",
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     featured: true,
   },
   {
@@ -63,7 +63,7 @@ export const districts: District[] = [
     templeCount: 140,
     description: "UNESCO heritage city with Brihadeeswarar Temple. Center of Chola architecture.",
     descriptionTamil: "பிரகதீஸ்வரர் கோவிலுடன் கூடிய யுனெஸ்கோ பாரம்பரிய நகரம். சோழர் கட்டிடக்கலையின் மையம்.",
-    image: "https://images.unsplash.com/photo-1581852057105-68d8d43e891f",
+    image: "https://images.unsplash.com/photo-1717417925229-600a68f75cab",
     featured: true,
   },
   {
@@ -74,7 +74,7 @@ export const districts: District[] = [
     templeCount: 80,
     description: "Spiritual capital with Annamalaiyar Temple. Famous for Girivalam and Karthigai Deepam.",
     descriptionTamil: "அருணாசலேஸ்வரர் கோவிலுடன் கூடிய ஆன்மீக தலைநகரம். கிரிவலம் மற்றும் கார்த்திகை தீபத்திற்கு புகழ்பெற்றது.",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     featured: true,
   },
   {
@@ -95,7 +95,7 @@ export const districts: District[] = [
     templeCount: 60,
     description: "Home to Ramanathaswamy Temple at Rameswaram. One of the Char Dham pilgrimage sites.",
     descriptionTamil: "ராமேஸ்வரத்தில் உள்ள ராமநாதசுவாமி கோவிலின் இருப்பிடம். சார் தாம் யாத்திரை தலங்களில் ஒன்று.",
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
   },
   {
     id: "dindigul",
@@ -115,7 +115,7 @@ export const districts: District[] = [
     templeCount: 45,
     description: "Home to Tiruchendur Murugan Temple, located by the sea.",
     descriptionTamil: "கடற்கரையில் அமைந்த திருச்செந்தூர் முருகன் கோவிலின் இருப்பிடம்.",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
   },
   {
     id: "nagapattinam",
@@ -125,7 +125,7 @@ export const districts: District[] = [
     templeCount: 55,
     description: "Home to several Navagraha temples and Nagore Dargah.",
     descriptionTamil: "பல நவக்கிரக கோவில்கள் மற்றும் நாகூர் தர்காவின் இருப்பிடம்.",
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
   },
   {
     id: "pudukkottai",
@@ -145,7 +145,7 @@ export const districts: District[] = [
     templeCount: 35,
     description: "Home to Pillayarpatti Vinayagar Temple, an ancient rock-cut temple.",
     descriptionTamil: "பழமையான பாறைக் குகை கோவிலான பிள்ளையார்பட்டி விநாயகர் கோவிலின் இருப்பிடம்.",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
   },
   {
     id: "tiruvallur",
@@ -155,7 +155,7 @@ export const districts: District[] = [
     templeCount: 65,
     description: "Home to Thiruthani Murugan Temple, one of the Arupadai Veedu.",
     descriptionTamil: "ஆறுபடை வீடுகளில் ஒன்றான திருத்தணி முருகன் கோவிலின் இருப்பிடம்.",
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
   },
   {
     id: "karaikal",
@@ -175,7 +175,7 @@ export const districts: District[] = [
     templeCount: 30,
     description: "Home to Srikalahasti Temple, one of the Pancha Bhoota Sthalams.",
     descriptionTamil: "பஞ்ச பூத ஸ்தலங்களில் ஒன்றான ஸ்ரீகாளஹஸ்தி கோவிலின் இருப்பிடம்.",
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
   },
   {
     id: "tirupati",
@@ -185,7 +185,7 @@ export const districts: District[] = [
     templeCount: 20,
     description: "Home to the world-famous Tirumala Venkateswara Temple.",
     descriptionTamil: "உலகப் புகழ்பெற்ற திருமலை வேங்கடேஸ்வரர் கோவிலின் இருப்பிடம்.",
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     featured: true,
   },
 ];

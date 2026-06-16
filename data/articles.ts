@@ -110,7 +110,7 @@ export const articles: Article[] = [
     description:
       "சோழர், பாண்டியர், பல்லவர் மற்றும் நாயக்கர் காலங்களில் உருவான தமிழ்நாட்டு கோவில் கட்டிடக்கலையின் வளர்ச்சி, சிறப்புகள் மற்றும் தனித்துவங்கள் பற்றிய விரிவான கட்டுரை.",
     category: articleCategories[0],
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     author: authors[0],
     publishedAt: "2026-06-10",
     readTime: 15,
@@ -124,7 +124,7 @@ export const articles: Article[] = [
     description:
       "நிலம், நீர், நெருப்பு, காற்று மற்றும் ஆகாயத்தை பிரதிபலிக்கும் ஐந்து புனித சிவ தலங்களின் முழுமையான வழிகாட்டி.",
     category: articleCategories[1],
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     author: authors[1],
     publishedAt: "2026-06-08",
     readTime: 8,
@@ -166,7 +166,7 @@ export const articles: Article[] = [
     description:
       "சோழர் கால கட்டிடக்கலையின் உச்சமான பிரகதீஸ்வரர் கோவிலுக்கு முழுமையான பயண திட்டமிடல் வழிகாட்டி.",
     category: articleCategories[3],
-    image: "https://images.unsplash.com/photo-1581852057105-68d8d43e891f",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     author: authors[4],
     publishedAt: "2026-05-28",
     readTime: 7,
@@ -180,7 +180,7 @@ export const articles: Article[] = [
     description:
       "மில்லியன் பக்தர்களை ஈர்க்கும் சித்திரை திருவிழாவின் வரலாறு, சடங்குகள் மற்றும் கொண்டாட்டங்கள்.",
     category: articleCategories[4],
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     author: authors[5],
     publishedAt: "2026-05-25",
     readTime: 9,
@@ -194,7 +194,7 @@ export const articles: Article[] = [
     description:
       "சிதம்பர ரகசியம், நடராஜரின் தாண்டவ அர்த்தம் மற்றும் கோவிலின் புராண பின்னணி.",
     category: articleCategories[0],
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     author: authors[6],
     publishedAt: "2026-05-20",
     readTime: 11,
@@ -208,7 +208,7 @@ export const articles: Article[] = [
     description:
       "மதுரை மீனாட்சி அம்மன் கோவிலின் 14 கோபுரங்களின் கட்டிடக்கலை சிறப்புகள் மற்றும் வரலாறு.",
     category: articleCategories[5],
-    image: "https://images.unsplash.com/photo-1605649487212-47bdab064df7",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     author: authors[3],
     publishedAt: "2026-05-15",
     readTime: 8,
@@ -222,7 +222,7 @@ export const articles: Article[] = [
     description:
       "திருவண்ணாமலை கிரிவலத்தின் ஆன்மீக முக்கியத்துவம், வழிபாட்டு முறைகள் மற்றும் பயண குறிப்புகள்.",
     category: articleCategories[3],
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     author: authors[1],
     publishedAt: "2026-05-10",
     readTime: 6,
@@ -250,7 +250,7 @@ export const articles: Article[] = [
     description:
       "உலகப்புகழ் பெற்ற கார்த்திகை தீப திருவிழாவின் வரலாறு மற்றும் சிறப்புகள்.",
     category: articleCategories[4],
-    image: "https://images.unsplash.com/photo-1548013146-72479768bada",
+    image: "https://images.unsplash.com/photo-1544588440-fc7551331160",
     author: authors[5],
     publishedAt: "2026-05-01",
     readTime: 7,
