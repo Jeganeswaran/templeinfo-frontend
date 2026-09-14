@@ -2,22 +2,25 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { FaBars, FaTimes, FaSearch, FaChevronDown } from "react-icons/fa";
+import { FaBars, FaTimes, FaSearch, FaChevronDown, FaSun, FaMoon } from "react-icons/fa";
+import { useTheme, useLanguage } from "@/context";
 
 export default function Header() {
     const [mobileMenu, setMobileMenu] = useState(false);
+    const { theme, toggleTheme } = useTheme();
+    const { language, setLanguage, t } = useLanguage();
 
     return (
         <>
             {/* Top Bar */}
             <div className="bg-gradient-to-r from-amber-600 to-orange-600 text-white text-sm">
                 <div className="max-w-7xl mx-auto px-4 h-10 flex items-center justify-center">
-                    🛕 தமிழ்நாட்டின் மிகப்பெரிய கோவில் தகவல் களஞ்சியம்
+                    🛕 {t("தமிழ்நாட்டின் மிகப்பெரிய கோவில் தகவல் களஞ்சியம்", "Tamil Nadu's Largest Temple Information Repository")}
                 </div>
             </div>
 
             {/* Header */}
-            <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-lg border-b border-amber-100 shadow-sm">
+            <header className="sticky top-0 z-50 bg-white/90 dark:bg-gray-900/90 backdrop-blur-lg border-b border-amber-100 dark:border-gray-800 shadow-sm">
                 <div className="max-w-7xl mx-auto px-4">
                     <div className="h-20 flex items-center justify-between">
                         {/* Logo */}
@@ -44,77 +47,97 @@ export default function Header() {
                                 href="/"
                                 className="text-primary font-semibold hover:text-primary-hover transition"
                             >
-                                முகப்பு
+                                {t("முகப்பு", "Home")}
                             </Link>
 
                             <div className="relative group">
-                                <button className="flex items-center gap-2 font-medium text-gray-700 hover:text-primary-hover transition">
-                                    கோவில் வகைகள்
+                                <button className="flex items-center gap-2 font-medium text-gray-700 dark:text-gray-300 hover:text-primary-hover transition">
+                                    {t("கோவில் வகைகள்", "Temple Types")}
                                     <FaChevronDown size={12} />
                                 </button>
 
-                                <div className="absolute top-full left-0 mt-4 w-72 bg-white rounded-2xl shadow-xl border border-gray-100 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300">
+                                <div className="absolute top-full left-0 mt-4 w-72 bg-white dark:bg-gray-800 rounded-2xl shadow-xl border border-gray-100 dark:border-gray-700 opacity-0 invisible group-hover:visible group-hover:opacity-100 transition-all duration-300">
                                     <div className="p-4">
                                         <Link
                                             href="/shiva-temples"
-                                            className="block px-4 py-3 rounded-xl hover:bg-orange-100"
+                                            className="block px-4 py-3 rounded-xl hover:bg-orange-100 dark:hover:bg-gray-700"
                                         >
-                                            🕉 சிவன் கோவில்கள்
+                                            🕉 {t("சிவன் கோவில்கள்", "Shiva Temples")}
                                         </Link>
 
                                         <Link
                                             href="/vishnu-temples"
-                                            className="block px-4 py-3 rounded-xl hover:bg-orange-100"
+                                            className="block px-4 py-3 rounded-xl hover:bg-orange-100 dark:hover:bg-gray-700"
                                         >
-                                            🙏 விஷ்ணு கோவில்கள்
+                                            🙏 {t("விஷ்ணு கோவில்கள்", "Vishnu Temples")}
                                         </Link>
 
                                         <Link
                                             href="/murugan-temples"
-                                            className="block px-4 py-3 rounded-xl hover:bg-orange-100"
+                                            className="block px-4 py-3 rounded-xl hover:bg-orange-100 dark:hover:bg-gray-700"
                                         >
-                                            🔱 முருகன் கோவில்கள்
+                                            🔱 {t("முருகன் கோவில்கள்", "Murugan Temples")}
                                         </Link>
 
                                         <Link
                                             href="/amman-temples"
-                                            className="block px-4 py-3 rounded-xl hover:bg-orange-100"
+                                            className="block px-4 py-3 rounded-xl hover:bg-orange-100 dark:hover:bg-gray-700"
                                         >
-                                            🌺 அம்மன் கோவில்கள்
+                                            🌺 {t("அம்மன் கோவில்கள்", "Amman Temples")}
                                         </Link>
 
                                         <Link
                                             href="/vinayagar-temples"
-                                            className="block px-4 py-3 rounded-xl hover:bg-orange-100"
+                                            className="block px-4 py-3 rounded-xl hover:bg-orange-100 dark:hover:bg-gray-700"
                                         >
-                                            🐘 விநாயகர் கோவில்கள்
+                                            🐘 {t("விநாயகர் கோவில்கள்", "Vinayagar Temples")}
                                         </Link>
                                     </div>
                                 </div>
                             </div>
                             <Link
                                 href="/temple-groups"
-                                className="font-medium text-gray-700 hover:text-primary-hover transition"
+                                className="font-medium text-gray-700 dark:text-gray-300 hover:text-primary-hover transition"
                             >
-                                சிறப்பு தலங்கள்
+                                {t("சிறப்பு தலங்கள்", "Sacred Places")}
                             </Link>
 
                             <Link
                                 href="/blog"
-                                className="font-medium text-gray-700 hover:text-primary-hover transition"
+                                className="font-medium text-gray-700 dark:text-gray-300 hover:text-primary-hover transition"
                             >
-                                கட்டுரைகள்
+                                {t("கட்டுரைகள்", "Articles")}
                             </Link>
                         </nav>
 
                         {/* Right Side */}
                         <div className="flex items-center gap-3">
+                            {/* Language Toggle */}
+                            <button
+                                onClick={() => setLanguage(language === "ta" ? "en" : "ta")}
+                                className="hidden sm:flex items-center gap-1.5 px-3 py-2 rounded-full border border-gray-300 hover:border-primary hover:text-primary-hover transition text-sm font-medium dark:border-gray-600 dark:hover:border-orange-500"
+                                title={language === "ta" ? "Switch to English" : "தமிழுக்கு மாற்று"}
+                            >
+                                <span className={language === "ta" ? "text-primary font-bold" : "text-gray-500 dark:text-gray-400"}>த</span>
+                                <span className="text-gray-300 dark:text-gray-600">/</span>
+                                <span className={language === "en" ? "text-primary font-bold" : "text-gray-500 dark:text-gray-400"}>En</span>
+                            </button>
+
+                            {/* Theme Toggle */}
+                            <button
+                                onClick={toggleTheme}
+                                className="p-2.5 rounded-full border border-gray-300 hover:border-primary hover:text-primary-hover transition dark:border-gray-600 dark:hover:border-orange-500"
+                                title={theme === "light" ? "Switch to dark mode" : "Switch to light mode"}
+                            >
+                                {theme === "light" ? <FaMoon size={16} /> : <FaSun size={16} className="text-yellow-500" />}
+                            </button>
+
                             <Link
                                 href="/search"
-                                className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-300 hover:border-primary hover:text-primary-hover transition"
+                                className="hidden md:flex items-center gap-2 px-5 py-2.5 rounded-full border border-gray-300 hover:border-primary hover:text-primary-hover transition dark:border-gray-600 dark:hover:border-orange-500"
                             >
                                 <FaSearch size={14} />
-                                தேடுங்கள்
+                                {t("தேடுங்கள்", "Search")}
                             </Link>
 
                             <button
@@ -136,12 +159,12 @@ export default function Header() {
                     }`}
             >
                 <div
-                    className={`absolute right-0 top-0 h-full w-80 bg-white transition-transform duration-300 ${mobileMenu
+                    className={`absolute right-0 top-0 h-full w-80 bg-white dark:bg-gray-900 transition-transform duration-300 ${mobileMenu
                         ? "translate-x-0"
                         : "translate-x-full"
                         }`}
                 >
-                    <div className="p-5 border-b flex items-center justify-between">
+                    <div className="p-5 border-b dark:border-gray-800 flex items-center justify-between">
                         <h2 className="text-xl font-bold">
                             TempleInfo
                         </h2>
@@ -151,68 +174,96 @@ export default function Header() {
                         </button>
                     </div>
 
+                    {/* Mobile Language & Theme Controls */}
+                    <div className="p-5 border-b dark:border-gray-800 flex items-center gap-3">
+                        <button
+                            onClick={() => setLanguage(language === "ta" ? "en" : "ta")}
+                            className="flex-1 flex items-center justify-center gap-2 px-3 py-2.5 rounded-xl border border-gray-300 dark:border-gray-700 hover:border-primary transition text-sm font-medium"
+                        >
+                            <span className={language === "ta" ? "text-primary font-bold" : "text-gray-500"}>த</span>
+                            <span className="text-gray-300">/</span>
+                            <span className={language === "en" ? "text-primary font-bold" : "text-gray-500"}>En</span>
+                        </button>
+
+                        <button
+                            onClick={toggleTheme}
+                            className="p-2.5 rounded-xl border border-gray-300 dark:border-gray-700 hover:border-primary transition"
+                        >
+                            {theme === "light" ? <FaMoon size={18} /> : <FaSun size={18} className="text-yellow-500" />}
+                        </button>
+                    </div>
+
                     <div className="p-5 space-y-2">
                         <Link
                             href="/"
-                            className="block p-3 rounded-xl hover:bg-amber-50"
+                            className="block p-3 rounded-xl hover:bg-amber-50 dark:hover:bg-gray-800"
+                            onClick={() => setMobileMenu(false)}
                         >
-                            🏠 முகப்பு
+                            🏠 {t("முகப்பு", "Home")}
                         </Link>
 
                         <Link
                             href="/shiva-temples"
-                            className="block p-3 rounded-xl hover:bg-amber-50"
+                            className="block p-3 rounded-xl hover:bg-amber-50 dark:hover:bg-gray-800"
+                            onClick={() => setMobileMenu(false)}
                         >
-                            🕉 சிவன் கோவில்கள்
+                            🕉 {t("சிவன் கோவில்கள்", "Shiva Temples")}
                         </Link>
 
                         <Link
                             href="/vishnu-temples"
-                            className="block p-3 rounded-xl hover:bg-amber-50"
+                            className="block p-3 rounded-xl hover:bg-amber-50 dark:hover:bg-gray-800"
+                            onClick={() => setMobileMenu(false)}
                         >
-                            🙏 விஷ்ணு கோவில்கள்
+                            🙏 {t("விஷ்ணு கோவில்கள்", "Vishnu Temples")}
                         </Link>
 
                         <Link
                             href="/murugan-temples"
-                            className="block p-3 rounded-xl hover:bg-amber-50"
+                            className="block p-3 rounded-xl hover:bg-amber-50 dark:hover:bg-gray-800"
+                            onClick={() => setMobileMenu(false)}
                         >
-                            🔱 முருகன் கோவில்கள்
+                            🔱 {t("முருகன் கோவில்கள்", "Murugan Temples")}
                         </Link>
 
                         <Link
                             href="/amman-temples"
-                            className="block p-3 rounded-xl hover:bg-amber-50"
+                            className="block p-3 rounded-xl hover:bg-amber-50 dark:hover:bg-gray-800"
+                            onClick={() => setMobileMenu(false)}
                         >
-                            🌺 அம்மன் கோவில்கள்
+                            🌺 {t("அம்மன் கோவில்கள்", "Amman Temples")}
                         </Link>
 
                         <Link
                             href="/108-divya-desam"
-                            className="block p-3 rounded-xl hover:bg-amber-50"
+                            className="block p-3 rounded-xl hover:bg-amber-50 dark:hover:bg-gray-800"
+                            onClick={() => setMobileMenu(false)}
                         >
-                            🛕 108 திவ்ய தேசங்கள்
+                            🛕 {t("108 திவ்ய தேசங்கள்", "108 Divya Desams")}
                         </Link>
 
                         <Link
                             href="/navagraha-temples"
-                            className="block p-3 rounded-xl hover:bg-amber-50"
+                            className="block p-3 rounded-xl hover:bg-amber-50 dark:hover:bg-gray-800"
+                            onClick={() => setMobileMenu(false)}
                         >
-                            ☀ நவகிரக கோவில்கள்
+                            ☀ {t("நவகிரக கோவில்கள்", "Navagraha Temples")}
                         </Link>
 
                         <Link
                             href="/blog"
-                            className="block p-3 rounded-xl hover:bg-amber-50"
+                            className="block p-3 rounded-xl hover:bg-amber-50 dark:hover:bg-gray-800"
+                            onClick={() => setMobileMenu(false)}
                         >
-                            📚 கட்டுரைகள்
+                            📚 {t("கட்டுரைகள்", "Articles")}
                         </Link>
 
                         <Link
                             href="/contact"
-                            className="block p-3 rounded-xl hover:bg-amber-50"
+                            className="block p-3 rounded-xl hover:bg-amber-50 dark:hover:bg-gray-800"
+                            onClick={() => setMobileMenu(false)}
                         >
-                            📞 தொடர்புக்கு
+                            📞 {t("தொடர்புக்கு", "Contact")}
                         </Link>
                     </div>
                 </div>

@@ -6,7 +6,7 @@ export default function Hero() {
         <section className="relative pt-20 h-[750px]">
 
             <Image
-                src="https://images.unsplash.com/photo-1605649487212-47bdab064df7"
+                src="https://images.unsplash.com/photo-1544588440-fc7551331160"
                 alt="திருக்கோவில் படத்தைச் சார்ந்த பின்னணி"
                 fill
                 className="absolute inset-0 w-full h-full object-cover"

@@ -3,6 +3,7 @@ import { Noto_Sans_Tamil } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import { ThemeProvider, LanguageProvider } from "@/context";
 
 const tamil = Noto_Sans_Tamil({
   subsets: ["tamil"],
@@ -23,11 +24,16 @@ export default function RootLayout({
     <html
       lang="ta"
       className={`${tamil.variable} antialiased`}
+      suppressHydrationWarning
     >
-      <body className="text-gray-800">
-        <Header />
-        {children}
-        <Footer />
+      <body className="text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+        <ThemeProvider>
+          <LanguageProvider>
+            <Header />
+            {children}
+            <Footer />
+          </LanguageProvider>
+        </ThemeProvider>
       </body>
     </html>
   );

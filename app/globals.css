@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme {
   --color-mint-500: oklch(0.72 0.11 178);
   --color-primary: #d97706;
@@ -80,6 +82,12 @@ body {
   background: var(--background);
   color: var(--text);
   font-family: var(--font-tamil), sans-serif;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background: #111827;
+  color: #f3f4f6;
 }
 
 img {
