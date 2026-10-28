@@ -96,7 +96,7 @@ export default function PanchaBhootaSthalam() {
           </Link>
         </div>
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid md:grid-cols-2 grid-cols-2 lg:grid-cols-5 gap-4">
           {panchaBhootaTemples.map((temple) => (
             <Link
               key={temple.id}

@@ -32,7 +32,7 @@ export default async function ArticlesGrid() {
         </div>
 
         {/* Grid */}
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {articles.map((article) => (
             <Link
               key={article.id}
@@ -53,10 +53,10 @@ export default async function ArticlesGrid() {
                     >
                       {article.category.name}
                     </span>
-                <h3 className="font-bold text-lg text-amber-900">
+                <h3 className="font-bold text-sm md:text-lg text-amber-900 text-justify line-clamp-3">
                   {article.title}
                 </h3>
-                <p className="text-sm text-gray-500 mt-2 line-clamp-3">
+                <p className="text-xs md:text-sm text-gray-500 mt-2 line-clamp-3 text-justify">
                   {article.description}
                 </p>
               </div>

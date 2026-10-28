@@ -108,6 +108,20 @@ export default function Header() {
                             >
                                 {t("கட்டுரைகள்", "Articles")}
                             </Link>
+
+                            <Link
+                                href="/about"
+                                className="font-medium text-gray-700 dark:text-gray-300 hover:text-primary-hover transition"
+                            >
+                                {t("எங்களை பற்றி", "About")}
+                            </Link>
+
+                            <Link
+                                href="/contact"
+                                className="font-medium text-gray-700 dark:text-gray-300 hover:text-primary-hover transition"
+                            >
+                                {t("தொடர்பு", "Contact")}
+                            </Link>
                         </nav>
 
                         {/* Right Side */}
@@ -256,6 +270,22 @@ export default function Header() {
                             onClick={() => setMobileMenu(false)}
                         >
                             📚 {t("கட்டுரைகள்", "Articles")}
+                        </Link>
+
+                        <Link
+                            href="/about"
+                            className="block p-3 rounded-xl hover:bg-amber-50 dark:hover:bg-gray-800"
+                            onClick={() => setMobileMenu(false)}
+                        >
+                            ℹ️ {t("எங்களை பற்றி", "About")}
+                        </Link>
+
+                        <Link
+                            href="/contact"
+                            className="block p-3 rounded-xl hover:bg-amber-50 dark:hover:bg-gray-800"
+                            onClick={() => setMobileMenu(false)}
+                        >
+                            ✉️ {t("தொடர்பு", "Contact")}
                         </Link>
 
                         <Link

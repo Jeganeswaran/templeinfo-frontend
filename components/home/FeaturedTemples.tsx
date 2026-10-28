@@ -28,7 +28,7 @@ export default function FeaturedTemples() {
         </div>
 
         {/* Cards Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {featuredTemples.map((temple) => (
             <TempleCard key={temple.id} temple={temple} />
           ))}
