@@ -1,4 +1,6 @@
-import { Temple, Article } from "@/data/types";
+import type { Article, Temple } from "@/data/types";
+
+export type { Temple };
 
 export type SearchTab = "temples" | "articles";
 export type ViewMode = "grid" | "list";

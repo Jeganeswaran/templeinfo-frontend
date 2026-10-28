@@ -43,7 +43,7 @@ export function TempleCard({ temple }: Props) {
           </div>
 
           <Link
-            href={`/temples/${temple.slug}`}
+            href={`/temple/${temple.id}`}
             className="flex items-center gap-1 text-sm font-medium"
           >
             Explore

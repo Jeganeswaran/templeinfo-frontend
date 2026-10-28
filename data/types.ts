@@ -45,6 +45,7 @@ export interface Temple {
   category?: string;
   element?: TempleElement;
   featured?: boolean;
+  slug?: string;
 }
 
 export interface TempleElement {
